@@ -10,6 +10,7 @@
     <string name="q_fourth">Czy w diablo 2 jednym z easter eggów jest ukryty poziom krowi?</string>
     <string name="q_fifth">Czy harlequin crest będący jedną z lepszych czapek w Diablo 2 jest koloru niebieskiego?</string>
 
+    <string name="answer_was_shown">Oszukujesz! Odpowiedź była już wyświetlona.</string>
     <string name="correct_answer">Bardzo dobrze!</string>
     <string name="incorrect_answer">Niestety nie udało Ci się!</string>
 </resources>

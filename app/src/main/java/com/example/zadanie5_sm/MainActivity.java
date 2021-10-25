@@ -1,5 +1,6 @@
 package com.example.zadanie5_sm;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,6 +13,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static boolean answerWasShown;
+    private static final int REQUEST_CODE_PROMPT = 0;
     public static final String KEY_EXTRA_ANSWER = "com.example.zadanie5_sm.correctanswer";
     private static final String KEY_CURRENT_INDEX = "currentIndex";
     private static final String QUIZ_TAG = "MainActivity";
@@ -72,10 +75,14 @@ public class MainActivity extends AppCompatActivity {
     private void checkAnswerCorrectness(boolean userAnswer) {
         boolean correctAnswer = questions[currentIndex].isTrueAnswer();
         int resultMessageId = 0;
-        if(userAnswer == correctAnswer){
-            resultMessageId = R.string.correct_answer;
-        } else {
-            resultMessageId = R.string.incorrect_answer;
+        if(answerWasShown){
+            resultMessageId = R.string.answer_was_shown;
+        }else{
+            if(userAnswer == correctAnswer){
+                resultMessageId = R.string.correct_answer;
+            } else {
+                resultMessageId = R.string.incorrect_answer;
+            }
         }
         Toast.makeText(this, resultMessageId, Toast.LENGTH_SHORT).show();
     }
@@ -122,10 +129,25 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, PromptActivity.class);
             boolean correctAnswer = questions[currentIndex].isTrueAnswer();
             intent.putExtra(KEY_EXTRA_ANSWER, correctAnswer);
-            startActivity(intent);
+            startActivityForResult(intent, REQUEST_CODE_PROMPT);
+        });
+
+        nextButton.setOnClickListener((v) -> {
+            currentIndex = (currentIndex+1)%questions.length;
+            answerWasShown = false;
+            setNextQuestion();
         });
 
         setNextQuestion();
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode != RESULT_OK) { return; }
+        if(requestCode == REQUEST_CODE_PROMPT) {
+            if(data == null) { return; }
+            answerWasShown = data.getBooleanExtra(PromptActivity.KEY_EXTRA_ANSWER_SHOW, false);
+        }
     }
 
     private void setNextQuestion() {
