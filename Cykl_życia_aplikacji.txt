@@ -1,0 +1,39 @@
+Po uruchomieniu symulatora i włączeniu aplikacji wywołano trzy metody:
+2021-10-25 09:31:19.343 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onCreate
+2021-10-25 09:31:19.518 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStart
+2021-10-25 09:31:19.519 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onResume
+
+Po wciśnięciu przycisku "Cofnij":
+2021-10-25 09:34:04.928 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onPause
+2021-10-25 09:34:05.717 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStop
+2021-10-25 09:34:05.722 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onDestroy
+
+Po ponownym uruchomieniu aplikacji:
+2021-10-25 09:35:47.616 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onCreate
+2021-10-25 09:35:47.753 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStart
+2021-10-25 09:35:47.755 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onResume
+
+Po wciśnięciu przycisku ekranu głównego Home:
+2021-10-25 09:36:39.111 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onPause
+2021-10-25 09:36:39.487 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStop
+
+Po powrocie do aplikacji z listy ostatnio używanych aplikacji:
+2021-10-25 09:37:01.843 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStart
+2021-10-25 09:37:01.844 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onResume
+
+Po obrocie ekranu aplikacja uruchomiła się na nowo co poskutkowało powrotem do pytania pierwszego i następującymi logami:
+2021-10-25 09:42:24.152 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onPause
+2021-10-25 09:42:24.156 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStop
+2021-10-25 09:42:24.157 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onDestroy
+2021-10-25 09:42:24.214 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onCreate
+2021-10-25 09:42:24.258 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStart
+2021-10-25 09:42:24.259 12662-12662/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onResume
+
+Po dopisaniu metody onSaveInstanceState i zapisaniu indexu pytania, pytanie po obrocie ekranu pozostaje takie samo:
+2021-10-25 09:48:46.606 13180-13180/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onPause
+2021-10-25 09:48:46.609 13180-13180/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStop
+2021-10-25 09:48:46.612 13180-13180/com.example.zadanie5_sm D/MainActivity: Wywołano metodę: onSaveInstanceState
+2021-10-25 09:48:46.612 13180-13180/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onDestroy
+2021-10-25 09:48:46.654 13180-13180/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onCreate
+2021-10-25 09:48:46.731 13180-13180/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onStart
+2021-10-25 09:48:46.732 13180-13180/com.example.zadanie5_sm D/MainActivity: Wywołano metodę cyklu życia: onResume

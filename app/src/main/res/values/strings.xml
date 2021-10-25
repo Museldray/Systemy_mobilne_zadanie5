@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Zadanie5</string>
+    <string name="button_true">Prawda</string>
+    <string name="button_false">Fałsz</string>
+    <string name="button_next">Następne</string>
+
+    <string name="q_first">Czy Duriel jest najtrudniejszym bossem w Diablo 2?</string>
+    <string name="q_second">Czy słowo runiczne Stealth tworzy się z run Ort i Sol?</string>
+    <string name="q_third">Czy Blizzard niepotrzebnie ocenzurował Andariel w Diablo 2?</string>
+    <string name="q_fourth">Czy w diablo 2 jednym z easter eggów jest ukryty poziom krowi?</string>
+    <string name="q_fifth">Czy harlequin crest będący jedną z lepszych czapek w Diablo 2 jest koloru niebieskiego?</string>
+
+    <string name="correct_answer">Bardzo dobrze!</string>
+    <string name="incorrect_answer">Niestety nie udało Ci się!</string>
+</resources>
